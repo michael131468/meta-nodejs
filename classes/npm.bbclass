@@ -7,7 +7,7 @@ PACKAGE_DEBUG_SPLIT_STYLE = "debug-file-directory"
 NPM = "npm"
 NPM_CACHE_DIR = "${WORKDIR}/npm_cache"
 NPM_ARCHFLAGS += "--arch=${TARGET_ARCH} --target_arch=${TARGET_ARCH}"
-NPM_FLAGS ?= ""	
+NPM_FLAGS ?= "--https-proxy=${https_proxy} --proxy=${http_proxy} "
 CCACHE = ""
 
 oe_runnpm() {
